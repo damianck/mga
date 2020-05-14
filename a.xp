@@ -1,0 +1,29 @@
+   final Properties oAuthProperties = new Properties();
+        try {
+            oAuthProperties.load(App.class.getResourceAsStream("properties"));
+        } catch (IOException e) {
+            System.out.println("Unable to read OAuth configuration. Make sure you have a properly formatted oAuth.properties file. See README for details.");
+            return;
+        }
+
+        final String appId = oAuthProperties.getProperty("app.id");
+        final String[] appScopes = oAuthProperties.getProperty("app.scopes").split(",");
+
+        System.out.println(appId);
+
+        // Get an access token
+        Authentication.initialize(appId);
+        final String accessToken = Authentication.getUserAccessToken(appScopes);
+
+        System.out.println("Access token: " + accessToken);
+
+        // Greet the user
+        User user = Graph.getUser(accessToken);
+        System.out.println("Welcome " + user.displayName);
+       // listCalendarEvents(accessToken);
+        //System.out.println(user.mail);
+        //System.out.println(user.mailFolders);
+
+
+        System.out.println();
+        listMsg(accessToken);
