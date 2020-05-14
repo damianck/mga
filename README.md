@@ -7,3 +7,7 @@ https://login.microsoftonline.com/256d2b4c-b5c3-758f-55f3-cd8969f04e86/oauth2/to
 
 https://login.microsoftonline.com/{TenantDirectory}.onmicrosoft.com/adminconsent?client_id={ApplicationID}
 https://docs.microsoft.com/en-us/graph/auth-v2-service
+
+http://xqting.com/msgraphandmsalinjavaformsteams
+
+https://medium.com/@fiqriismail/how-to-get-an-access-token-for-microsoft-graph-api-using-node-js-258723f29cc6
