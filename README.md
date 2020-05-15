@@ -11,3 +11,17 @@ https://docs.microsoft.com/en-us/graph/auth-v2-service
 http://xqting.com/msgraphandmsalinjavaformsteams
 
 https://medium.com/@fiqriismail/how-to-get-an-access-token-for-microsoft-graph-api-using-node-js-258723f29cc6
+
+
+ClientCredentialProvider authProvider = new ClientCredentialProvider(
+            this.clientId,
+            this.scopes,
+            this.clientSecret,
+            this.tenantId,
+            this.endpoint);
+IGraphServiceClient graphClient = GraphServiceClient
+            .builder()
+            .authenticationProvider(authProvider)
+            .buildClient();
+
+https://stackoverflow.com/questions/61807289/microsoft-graph-api-getting-access-without-a-user-in-java/61819800#61819800
