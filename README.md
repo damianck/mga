@@ -25,3 +25,8 @@ IGraphServiceClient graphClient = GraphServiceClient
             .buildClient();
 
 https://stackoverflow.com/questions/61807289/microsoft-graph-api-getting-access-without-a-user-in-java/61819800#61819800
+
+
+
+
+https://stackoverflow.com/questions/7929369/how-to-rebase-local-branch-onto-remote-master/18442755#18442755
